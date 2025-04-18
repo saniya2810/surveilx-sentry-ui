@@ -1,11 +1,12 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/login";
+import SignUpPage from "./pages/signup";
 import Dashboard from "./pages/dashboard";
 import FacialRecognitionPage from "./pages/facial-recognition";
 import AnalysisPage from "./pages/analysis";
@@ -25,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/camera-feeds" element={<CameraFeedsPage />} />
           <Route path="/facial-recognition" element={<FacialRecognitionPage />} />
