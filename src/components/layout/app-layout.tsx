@@ -33,14 +33,13 @@ function MainContent({
   title: string;
   subtitle?: string;
 }) {
-  const sidebar = useSidebar();
-  const expanded = sidebar.expanded;
+  const { isExpanded } = useSidebar();
 
   return (
     <main
       className={cn(
         "flex-1 transition-all duration-300",
-        expanded ? "ml-64" : "ml-16"
+        isExpanded ? "ml-64" : "ml-16"
       )}
     >
       <Header title={title} subtitle={subtitle} />
